@@ -51,5 +51,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <!-- <script>window.renderApp()</script> -->
+  <script>
+    var hashFragment = document.location.hash
+      .split('&')
+      .find(function (s) { return s.match(/#?access_token=/) });
+    var accessToken = hashFragment ? hashFragment.split('=')[1] : '';
+    if (accessToken) {
+      window.renderApp();
+    }
+    </script>
 </html>
