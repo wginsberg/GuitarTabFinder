@@ -12,9 +12,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: SPOTIFY_TOP,
+      mode: SPOTIFY_RECENT,
       items: [],
-      page: 0
+      page: 0,
+      dataExhausted: true
     };
   }
 
@@ -27,15 +28,19 @@ class App extends React.Component {
       if (!this.spotifyApiService) {
         this.spotifyApiService = new SpotifyApiService();
       }
-      this.spotifyApiService
-        .topTracks(this.state.page)
-        .then(response => 
+      const request = this.state.mode === SPOTIFY_TOP
+        ? this.spotifyApiService.topTracks(this.state.page)
+        : this.spotifyApiService.recentTracks(this.state.page)
+      request
+        .then(items => {
           this.setState(state => 
             ({ 
               page: state.page + 1, 
-              items: [...state.items, ...response.data.items]
+              items: [...state.items, ...items],
+              dataExhausted: items.length === 0
             })
             )
+          }
         )
     }
   }
@@ -56,7 +61,11 @@ class App extends React.Component {
   }
 
   changeMode = mode => {
-    this.setState({ mode, items: [] });
+    this.setState({
+      mode,
+      items: [],
+      page: 0
+    });
   }
 
   render() {
@@ -74,7 +83,12 @@ class App extends React.Component {
         <div className={classes.TabList}>
           {this.state.items.map((track, i) => (<Tab key={i} track={track} />))}
         </div>
-        <button onClick={this.loadNextPage} className="m-8">Load more</button>
+        <button
+          onClick={this.loadNextPage}
+          className={this.state.dataExhausted ? "hidden" : "m-8"}
+        >
+          Load more
+        </button>
       </div>
     );
   }

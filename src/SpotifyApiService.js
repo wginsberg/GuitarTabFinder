@@ -22,7 +22,7 @@ class SpotifyApiService {
   getNewAccessToken() {
     let url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=token';
-    url += `&scope=${encodeURIComponent('user-top-read')}`;
+    url += `&scope=${encodeURIComponent('user-top-read user-read-recently-played')}`;
     url += `&client_id=${encodeURIComponent(clientId)}`;
     url += `&redirect_uri=${encodeURIComponent(redirectURI)}`;
 
@@ -34,7 +34,19 @@ class SpotifyApiService {
     const baseApiUrl = 'https://api.spotify.com/v1/me/top/tracks';
     return axios
       .get(`${baseApiUrl}?limit=${pageSize}&offset=${page * pageSize}&time_range=short_term`)
+      .then(response => response.data.items)
       .catch(this.getNewAccessToken);
+  }
+
+  recentTracks(page) {
+    // this endpoint will only ever return up to 50 tracks
+    return page === 0
+      ? axios
+        .get('https://api.spotify.com/v1/me/player/recently-played')
+        .then(response => response.data.items)
+        .then(items => items.map(item => item.track))
+        .catch(this.getNewAccessToken)
+      : new Promise(resolve => resolve([]));
   }
 }
 
