@@ -4,24 +4,6 @@
     object-fit: contain;
 }
 
-.Tab:not(:hover) .ExternalLink {
-    opacity: 0;
-    transition: opacity 0.3s 0.1s;
-}
-
-.ExternalLink {
-    display: inline-block;
-    margin-left: 8px;
-    width: 24px;
-    height: 24px;
-    padding: 2px;
-
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
-.ExternalLink img,
-.ExternalLink svg {
-    width: 100%;
-    height: 100%;
+.Tab:hover {
+    text-decoration: underline;
 }
