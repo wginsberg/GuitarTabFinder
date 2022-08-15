@@ -1,5 +1,6 @@
 {
-  "name": "tab-spot",
+  "name": "guitar-tab-finder",
+  "homepage": "https://wginsberg.github.io/guitar-tab-finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

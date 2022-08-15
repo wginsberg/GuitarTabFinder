@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const clientId = '3680b1abca094e458e2a9f190f5607d1';
-const redirectURI = `${window.location.protocol}//${window.location.host}`;
+const redirectURI = window.location.href.replace(/\/$/, '');
 
 class SpotifyApiService {
   constructor() {
