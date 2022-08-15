@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.be03895b.chunk.css",
-    "main.js": "/static/js/main.057bef72.chunk.js",
-    "main.js.map": "/static/js/main.057bef72.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6ed9e85e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6ed9e85e.js.map",
-    "static/js/2.462f06c6.chunk.js": "/static/js/2.462f06c6.chunk.js",
-    "static/js/2.462f06c6.chunk.js.map": "/static/js/2.462f06c6.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.49bd70c4f4f6dc8f015c78ff4812d645.js": "/precache-manifest.49bd70c4f4f6dc8f015c78ff4812d645.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.be03895b.chunk.css.map": "/static/css/main.be03895b.chunk.css.map"
+    "main.css": "/guitar-tab-finder/static/css/main.be03895b.chunk.css",
+    "main.js": "/guitar-tab-finder/static/js/main.08823bfb.chunk.js",
+    "main.js.map": "/guitar-tab-finder/static/js/main.08823bfb.chunk.js.map",
+    "runtime-main.js": "/guitar-tab-finder/static/js/runtime-main.f2643fd9.js",
+    "runtime-main.js.map": "/guitar-tab-finder/static/js/runtime-main.f2643fd9.js.map",
+    "static/js/2.93b5238c.chunk.js": "/guitar-tab-finder/static/js/2.93b5238c.chunk.js",
+    "static/js/2.93b5238c.chunk.js.map": "/guitar-tab-finder/static/js/2.93b5238c.chunk.js.map",
+    "index.html": "/guitar-tab-finder/index.html",
+    "precache-manifest.de4d6da8ef716c39aed27d1d6003cc45.js": "/guitar-tab-finder/precache-manifest.de4d6da8ef716c39aed27d1d6003cc45.js",
+    "service-worker.js": "/guitar-tab-finder/service-worker.js",
+    "static/css/main.be03895b.chunk.css.map": "/guitar-tab-finder/static/css/main.be03895b.chunk.css.map"
   }
 }
