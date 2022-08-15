@@ -14,8 +14,8 @@ const Tab = ({ track }) => {
 
   const spotifyUrl = track.external_urls.spotify;
 
-  const ultimateGuitarQuery = `site:ultimate-guitar.com ${title} ${artist}`;
-  const ultimateGuitarUrl = `https://google.com/search?q=${encodeURIComponent(ultimateGuitarQuery)}`;
+  const ultimateGuitarQuery = `${title} ${artist}`;
+  const ultimateGuitarUrl = `https://www.ultimate-guitar.com/search.php?search_type=title&value=${encodeURIComponent(ultimateGuitarQuery)}`;
 
   const songsterrBaseUrl = 'http://www.songsterr.com/a/wa/bestMatchForQueryString';
   const songsterrUrl = `${songsterrBaseUrl}?s=${encodeURIComponent(title)}&a=${encodeURIComponent(artist)}`;
