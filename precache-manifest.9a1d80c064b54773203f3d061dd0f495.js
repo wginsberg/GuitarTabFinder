@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5193af300906f8b5e6183611e39fd63f",
+    "revision": "1a1ca6f377db85fe578f54095776e73b",
     "url": "/guitar-tab-finder/index.html"
   },
   {
-    "revision": "d80547f61b9f0301b677",
+    "revision": "43a24184887179e25148",
     "url": "/guitar-tab-finder/static/css/main.be03895b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/guitar-tab-finder/static/js/2.93b5238c.chunk.js"
   },
   {
-    "revision": "d80547f61b9f0301b677",
-    "url": "/guitar-tab-finder/static/js/main.08823bfb.chunk.js"
+    "revision": "43a24184887179e25148",
+    "url": "/guitar-tab-finder/static/js/main.f6004aac.chunk.js"
   },
   {
     "revision": "4066581e430b93b76477",
